@@ -433,6 +433,12 @@ color: var(--primary-text-color);
 
 /* Buttons */
 /* button for index.html */
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
 .button {
   display: inline-block;
   border-radius: 4px;
