@@ -57,10 +57,40 @@
       <div class="overlay">
         <div class="hero-text">
           <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
-        <a href="#" class="button ancor">Заказать услугу</a>
+          <button class="button" data-open-modal><span>Заказать услугу</span></button>
         </div>
       </div>
     </section>
+    
+
+      <!-- Модалка -->
+  <div class="backdrop is-hidden" data-backdrop>
+    <div class="modal">
+      <h2 class="modal-header">Оставьте свои данные, мы вам перезвоним</h2>
+      <button data-close-modal>Закрыть</button>
+    </div>
+  </div>
+  
+  <script>
+    const refs = {
+      openModalBtn: document.querySelector("[data-open-modal]"),
+      closeModalBtn: document.querySelector("[data-close-modal]"),
+      backdrop: document.querySelector("[data-backdrop]"),
+    };
+
+    refs.openModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+
+    refs.backdrop.addEventListener("click", logBackdropClick);
+
+    function toggleModal() {
+      refs.backdrop.classList.toggle("is-hidden");
+    }
+
+    function logBackdropClick() {
+      console.log("Это клик в бекдроп");
+    }
+  </script>
 
     <!-- Advantages -->
     <section class="advantages"> 
@@ -386,40 +416,13 @@
       <div class="footer-container">
         <p class="connect">Подписаться на рассылку</p>
         <input type="email" placeholder="E-mail" class="email">
-        <button class="button" data-open-modal><span class="btn-text">Подписаться</span></button>
+        <button class="button"><span class="btn-text">Подписаться</span></button>
       </div>
     </div>
     <p class="copyright">2020 | Developed by GoIT Students </p> 
   </footer>
 
-  <!-- Модалка -->
-  <div class="backdrop is-hidden" data-backdrop>
-    <div class="modal">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos minus vitae veritatis at molestias dignissimos expedita qui asperiores sapiente placeat! Sed tenetur, ab in exercitationem aspernatur praesentium vitae a laudantium dicta deserunt error necessitatibus est natus facere temporibus non enim soluta doloremque odio vel aliquid perspiciatis sint quasi quo? Odit sunt quisquam, quaerat modi quos doloremque iure doloribus sit, debitis nemo dignissimos quidem dolores ipsam, quasi consectetur beatae ex. Fugiat sunt quas hic tempora debitis, molestiae qui mollitia dolor aspernatur, accusamus temporibus. Reiciendis porro alias enim recusandae eius harum animi accusamus dolorem? Cum aspernatur tempora in! Asperiores quibusdam doloribus labore?</p>
-      <button data-close-modal>Закрыть</button>
-    </div>
-  </div>
-  
-  <script>
-    const refs = {
-      openModalBtn: document.querySelector("[data-open-modal]"),
-      closeModalBtn: document.querySelector("[data-close-modal]"),
-      backdrop: document.querySelector("[data-backdrop]"),
-    };
 
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
-
-    refs.backdrop.addEventListener("click", logBackdropClick);
-
-    function toggleModal() {
-      refs.backdrop.classList.toggle("is-hidden");
-    }
-
-    function logBackdropClick() {
-      console.log("Это клик в бекдроп");
-    }
-  </script>
 
 <!-- Отступ на боди для фиксированного хедера -->
   <script>
