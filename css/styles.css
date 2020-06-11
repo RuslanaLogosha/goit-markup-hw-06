@@ -15,6 +15,7 @@
   --icons-footer-background: rgba(255, 255, 255, 0.1);
   --backdrop-background: rgba(0, 0, 0, 0.2);
   --form-field-border: rgba(33, 33, 33, 0.2);
+  --footer-subscribe-border: rgba(255, 255, 255, 0.3);
 }
 
 /* Утилиты */
@@ -143,7 +144,7 @@ body {
 .site-nav .link {
   display: block;
   padding-top: 32px;
-  padding-bottom: 33px;
+  padding-bottom: 34px;
 
   font-weight: 500;
   line-height: 1.14;
@@ -409,7 +410,6 @@ body {
   margin: 20px 22px 30px 25px;
 }
 .policy input[type='checkbox'] {
-  /* border-color: var(--titles-text-color); */
   margin-right: 8px;
 }
 .policy label {
@@ -433,11 +433,11 @@ color: var(--primary-text-color);
 
 /* Buttons */
 /* button for index.html */
-button, 
+/* button, 
 button:active, 
 button:focus {
     outline: none;
-}
+} */
 
 .button {
   display: inline-block;
@@ -455,8 +455,6 @@ button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
 }
-
-
 
 
 /* button for portfolio.html */
@@ -824,18 +822,24 @@ button:focus {
   background-color: var(--accent-text-color);
 }
 
-.connect .email {
-  display: block;
-
+/* Subscribe */
+.subscribe-email {
+  width: 358px;
+  height: 50px;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--footer-opaque-color);
+  border: 1px solid var(--footer-subscribe-border);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: var(--footer-background-color);
+
+
 }
 
-input::placeholder {
-  width: 270px;
-}
+
+
 
 /* Training of button with 2 pseudoelements flying aroud */
 .footer-container .button {

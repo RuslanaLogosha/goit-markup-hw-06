@@ -67,9 +67,10 @@
   <div class="backdrop is-hidden" data-backdrop>
     <div class="modal">
      <button class="modal-close" data-close-modal>
-       <svg class="modal-icon" width="11" height="11">
+       <!-- Не работает??? -->
+       <!-- <svg class="modal-icon" width="11" height="11">
          <use href="./images/close.svg"></use> 
-       </svg>
+       </svg> -->
      </button>
       <form class="form">
         <h2 class="modal-header">Оставьте свои данные, мы вам перезвоним</h2>
@@ -448,10 +449,15 @@
       </div>
         
       <div class="footer-container">
-        <p class="connect">Подписаться на рассылку</p>
-        <input type="email" placeholder="E-mail" class="email">
-        <button class="button"><span class="btn-text">Подписаться</span></button>
+        <form class="subscribe">
+          <p class="connect">Подписаться на рассылку</p>
+            <label>
+          <input type="email" name="email" placeholder="E-mail" class="subscribe-email">
+            </label>
+          <button class="button"><span class="btn-text">Подписаться</span></button>
+        </form>
       </div>
+
     </div>
     <p class="copyright">2020 | Developed by GoIT Students </p> 
   </footer>
