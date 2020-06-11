@@ -66,39 +66,39 @@
       <!-- Модалка -->
   <div class="backdrop is-hidden" data-backdrop>
     <div class="modal">
-     <button class="modal-close" data-close-modal>
-       <!-- Не работает??? -->
-       <!-- <svg class="modal-icon" width="11" height="11">
-         <use href="./images/close.svg"></use> 
-       </svg> -->
-     </button>
-      <form class="form">
+     <button class="modal-close" data-close-modal></button>
+
+     <form class="form" autocomplete="off">
         <h2 class="modal-header">Оставьте свои данные, мы вам перезвоним</h2>
 
-        <div class="form-field">
-          <!-- <label for="name">Имя</label> -->
-          <input type="text" id="name" name="name" placeholder="Имя" autofocus>
-        </div>
+        <label class="form-field">
+          <input type="text" class="form-input" name="name" placeholder=" " autofocus>
+          <span class="form-label">Имя</span>
+          <svg class="form-icon">
+            <use href="./images/sprite.svg#person-black"></use> 
+          </svg>
+        </label>
 
-        <div class="form-field">
-          <!-- <label for="tel">Телефон</label> -->
-          <input type="tel" id="tel" name="tel" placeholder="Телефон">
-        </div>
+        <label class="form-field">
+          <input type="tel" class="form-input" name="tel" placeholder=" ">
+          <span class="form-label">Телефон</span>
+        </label>
 
-        <div class="form-field">
-          <!-- <label for="email">Почта</label> -->
-          <input type="email" id="email" name="email" placeholder="Почта">
-        </div>
+        <label class="form-field">
+          <input type="email" class="form-input" name="email" placeholder=" ">
+          <span class="form-label">Почта</span>
+        </label>
         
-        <div class="form-field textarea">
-          <!-- <label for="comment"></label> -->
-          <textarea placeholder="Комментарий" name="comment" id="comment" cols="30" rows="8"></textarea>
-        </div>
-        
+        <label class="form-field">
+          <textarea class="form-input" name="comment" cols="30" rows="8" placeholder=" "></textarea>
+          <span class="form-label">Комментарий</span>
+        </label>
+
         <div class="policy">
           <input type="checkbox" id="policy" name="policy">
           <label for="policy">Согласен с рассылкой и принимаю <a href="#">Условия договора</a></label>
         </div>
+
         <button class="button">Отправить</button>
 
       </form>
