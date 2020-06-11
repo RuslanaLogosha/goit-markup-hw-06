@@ -405,12 +405,27 @@ body {
 
 .form-field:focus-within > .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
-  transform: translate(-25px, -20px);
+  transform: translate(-27px, -20px);
   color: var(--accent-text-color);
 }
 
+.form-icon {
+  position: absolute;
+  top: 13px;
+  left: 16px;
 
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-size: cover;
 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus-within > .form-icon {
+  fill: var(--accent-text-color);
+}
+ 
 
 
 
