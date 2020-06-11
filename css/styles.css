@@ -426,17 +426,16 @@ body {
   fill: var(--accent-text-color);
 }
  
-
-
-
-
 .policy {
-  display: block;
+  display: flex;
   margin: 20px 22px 30px 25px;
+  align-items: center;
 }
+
 .policy input[type='checkbox'] {
   margin-right: 8px;
 }
+
 .policy label {
 font-size: 14px;
 line-height: 1.71;
@@ -448,6 +447,35 @@ color: var(--primary-text-color);
 .policy a {
   color: var(--accent-text-color);
 }
+
+.checkbox {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form-check {
+  display: inline-block;
+  width: 15.9px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 2px solid var(--titles-text-color);
+  border-radius: 4px;
+}
+
+
+
 
 .form .button {
   display: block;
