@@ -496,7 +496,7 @@ color: var(--primary-text-color);
 
 .checkbox:checked + .check-icon {
   background-image: url('../images/icon-check.svg');
-  background-size: contain;
+  background-size: cover;
   background-origin: border-box;
 }
 
