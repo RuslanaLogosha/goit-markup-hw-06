@@ -57,16 +57,16 @@
       <div class="overlay">
         <div class="hero-text">
           <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
-          <button class="button" data-open-modal><span>Заказать услугу</span></button>
+          <button class="button" data-modal-open><span>Заказать услугу</span></button>
         </div>
       </div>
     </section>
     
 
       <!-- Модалка -->
-  <div class="backdrop is-hidden" data-backdrop>
+  <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-     <button class="modal-close" data-close-modal></button>
+     <button class="modal-close" data-modal-close></button>
 
      <form class="form" autocomplete="off">
         <h2 class="modal-header">Оставьте свои данные, мы вам перезвоним</h2>
@@ -114,26 +114,7 @@
     </div>
   </div>
   
-  <script>
-    const refs = {
-      openModalBtn: document.querySelector("[data-open-modal]"),
-      closeModalBtn: document.querySelector("[data-close-modal]"),
-      backdrop: document.querySelector("[data-backdrop]"),
-    };
-
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
-
-    refs.backdrop.addEventListener("click", logBackdropClick);
-
-    function toggleModal() {
-      refs.backdrop.classList.toggle("is-hidden");
-    }
-
-    function logBackdropClick() {
-      console.log("Это клик в бекдроп");
-    }
-  </script>
+  
 
     <!-- Advantages -->
     <section class="advantages"> 
@@ -481,5 +462,6 @@
     document.body.style.paddingTop = `${pageHeaderHeight}px`;
   </script>
 
+<script src="./js/modal.js"></script>
 </body>
 </html>
